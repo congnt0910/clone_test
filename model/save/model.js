@@ -20,11 +20,11 @@ model.save_data = function (title, total) {
             };
             return self.mongodb.data.create(doc);
         })
-        .then(function (docs) {
-            if(docs.length == 0) {
+        .then(function (doc) {
+            if(!doc) {
                 throw new Error("Create error");
             }
-            return docs[0]._id;
+            return doc._id;
         });
 };
 

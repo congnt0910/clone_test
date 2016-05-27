@@ -1,6 +1,6 @@
 "use strict";
 
-
+process.env.DEBUG = 'httpRequest';
 var _httpRequest = require('../../lib/httpRequest');
 var cheerio = require('cheerio');
 
